@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+<<<<<<< HEAD
+=======
+import Providers from './providers';
+import Link from 'next/link';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
+>>>>>>> f418b28 (Switch funcionando)
 
 const inter = Inter({ subsets: ['latin'] });
 
