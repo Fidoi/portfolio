@@ -4,6 +4,8 @@ import './globals.css';
 import Providers from './providers';
 import Link from 'next/link';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
+import Image from 'next/image';
+import Navbar from '@/components/NavBar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,19 +21,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-hidden`}>
         <Providers>
           <header className='py-6'>
             <nav className='container flex item-center justify-between'>
-              <ul>
-                <li>
-                  <Link href='/'>Home</Link>
-                </li>
-              </ul>
+              <Image
+                src='https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/logo.png?alt=media&token=a10945db-80e5-45b7-a209-aa9c796ea44d'
+                width={100}
+                height={100}
+                alt='Picture of the author'
+              />
+              <Navbar />
               <ThemeSwitcher />
             </nav>
           </header>
-          <main>{children}</main>
+          {children}
           <footer></footer>
         </Providers>
       </body>

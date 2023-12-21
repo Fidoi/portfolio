@@ -18,7 +18,7 @@ export default function ThemeSwitcher() {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
-  if (!isMounted) return null;
+  if (!isMounted) return <></>;
 
   return (
     <Switch

@@ -24,11 +24,11 @@ const config: Config = {
       themes: {
         light: {
           layout: {},
-          colors: {},
+          colors: { primary: '#FFFFFF', foreground: '#11181C' },
         },
         dark: {
           layout: {},
-          colors: {},
+          colors: { primary: '#000000' },
         },
         modern: {
           extend: 'dark',
