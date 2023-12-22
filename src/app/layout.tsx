@@ -21,18 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} overflow-hidden`}>
+      <body className={`${inter.className} `}>
         <Providers>
-          <header className='py-6'>
-            <nav className='container flex item-center justify-between'>
-              <Image
-                src='https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/logo.png?alt=media&token=a10945db-80e5-45b7-a209-aa9c796ea44d'
-                width={100}
-                height={100}
-                alt='Picture of the author'
-              />
+          <header className='fixed w-screen'>
+            <nav>
               <Navbar />
-              <ThemeSwitcher />
             </nav>
           </header>
           {children}

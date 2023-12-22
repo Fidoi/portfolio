@@ -3,19 +3,19 @@ import { nextui } from '@nextui-org/react';
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
+
   theme: {
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: '1rem',
-        md: '1.5rem',
-        lg: '2rem',
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
@@ -24,11 +24,11 @@ const config: Config = {
       themes: {
         light: {
           layout: {},
-          colors: { primary: '#FFFFFF', foreground: '#11181C' },
+          colors: {},
         },
         dark: {
           layout: {},
-          colors: { primary: '#000000' },
+          colors: {},
         },
         modern: {
           extend: 'dark',
