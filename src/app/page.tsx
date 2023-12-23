@@ -1,5 +1,6 @@
 import * as React from 'react';
 import HeroSection from '@/components/HeroSection';
+import About from '@/components/About';
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <div className='container mx-auto py-4 px-12'>
         <HeroSection />
       </div>
+      <About />
     </main>
   );
 }

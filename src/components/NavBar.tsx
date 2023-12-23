@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import {
   Navbar,
@@ -6,11 +7,17 @@ import {
   NavbarItem,
   Link,
   Button,
+  NavbarMenuToggle,
+  NavbarMenu,
+  NavbarMenuItem,
 } from '@nextui-org/react';
-import Image from 'next/image';
+import { Image } from '@nextui-org/react';
 import ThemeSwitcher from './ThemeSwitcher';
 
 export default function NavBar() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const menuItems = ['Sobre mi', 'Proyectos', 'Tecnologias'];
+
   return (
     <div>
       <Navbar
@@ -18,35 +25,62 @@ export default function NavBar() {
         maxWidth='full'
         height={'5rem'}
         className='flex justify-between items-center '
+        onMenuOpenChange={setIsMenuOpen}
       >
-        <Image
-          src='https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/logo.png?alt=media&token=a10945db-80e5-45b7-a209-aa9c796ea44d'
-          width={75}
-          height={75}
-          alt='Picture of the author'
-        />
-        <NavbarBrand></NavbarBrand>
-        <NavbarContent className='lg:flex gap-4' justify='center'>
+        <NavbarContent>
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            className='sm:hidden'
+          />
+          <Image
+            isZoomed
+            isBlurred
+            src='https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/logo.png?alt=media&token=a10945db-80e5-45b7-a209-aa9c796ea44d'
+            width={75}
+            height={75}
+            alt='Logo'
+          />
+        </NavbarContent>
+        <NavbarContent className='hidden sm:flex gap-4' justify='center'>
           <NavbarItem>
             <Link color='foreground' href='#'>
               Sobre mi
             </Link>
           </NavbarItem>
           <NavbarItem isActive>
-            <Link color='foreground' href='/page'>
+            <Link href='#' aria-current='page'>
               Proyectos
             </Link>
           </NavbarItem>
           <NavbarItem>
             <Link color='foreground' href='#'>
-              Acerca de
+              Tecnologias
             </Link>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify='end'>
-          <NavbarItem></NavbarItem>
+          <ThemeSwitcher />
         </NavbarContent>
-        <ThemeSwitcher />
+        <NavbarMenu>
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                color={
+                  index === 1
+                    ? 'primary'
+                    : index === menuItems.length - 1
+                    ? 'danger'
+                    : 'foreground'
+                }
+                className='w-full'
+                href={`/${item}`}
+                size='lg'
+              >
+                {item}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
       </Navbar>
     </div>
   );
