@@ -45,19 +45,19 @@ const About = () => {
         'En Trebol-IT, contribuí al desarrollo de un tarificador empresarial usando Next.js y TypeScript, enfocándome en el diseño de interfaces y la integración de APIs internas. Destacó mi trabajo en la implementación de soluciones de autenticación segura con NextAuth y Keycloak, mejorando la seguridad y usabilidad del proyecto. Mi rol implicó colaboración con equipos multidisciplinarios, fortaleciendo mis habilidades en desarrollo de software en un contexto empresarial.',
       technologies: [
         {
-          nombre: 'Tecnología 1',
+          nombre: 'NextJs',
           src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/next-js-icon-logo-EE302D5DBD-seeklogo.com.png?alt=media&token=7db39c1e-cfff-4bd1-8ec6-239e9442bd97',
         },
         {
-          nombre: 'Tecnología 2',
+          nombre: 'NextAuth',
           src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/logo-sm.png?alt=media&token=954543b1-2f3e-4b1b-903b-3a3dc510bbfd',
         },
         {
-          nombre: 'Tecnología 3',
+          nombre: 'Keycloak',
           src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/Keycloak_Logo.png?alt=media&token=83f51e9b-096c-483e-af55-bdfbf0c8da2b',
         },
         {
-          nombre: 'Tecnología 4',
+          nombre: 'Typescript',
           src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/typescript_original_logo_icon_146317.png?alt=media&token=8b56e325-c026-4e2a-9307-45e4b6a70643',
         },
       ],
