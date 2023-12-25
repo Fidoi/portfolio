@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} flex min-h-screen flex-col`}>
         <Providers>
           <header className='fixed w-screen z-50'>
             <Navbar />

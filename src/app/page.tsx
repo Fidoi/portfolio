@@ -1,14 +1,16 @@
 import * as React from 'react';
 import HeroSection from '@/components/HeroSection';
 import About from '@/components/About';
+import EmailForm from '@/components/EmailForm';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col justify-center'>
-      <div className='container mx-auto py-4 px-12'>
+    <main className=''>
+      <div className='container mt-24 mx-auto  px-12 py-20'>
         <HeroSection />
       </div>
       <About />
+      <EmailForm />
     </main>
   );
 }

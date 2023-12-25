@@ -19,7 +19,7 @@ export default function NavBar() {
   const menuItems = ['Sobre mi', 'Proyectos', 'Tecnologias'];
 
   return (
-    <div>
+    <nav>
       <Navbar
         isBordered
         maxWidth='full'
@@ -61,7 +61,7 @@ export default function NavBar() {
         <NavbarContent justify='end'>
           <ThemeSwitcher />
         </NavbarContent>
-        <NavbarMenu>
+        <NavbarMenu className='flex flex-col items-center justify-center h-1/2'>
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
@@ -72,7 +72,7 @@ export default function NavBar() {
                     ? 'danger'
                     : 'foreground'
                 }
-                className='w-full'
+                className='w-full my-2 text-lg'
                 href={`/${item}`}
                 size='lg'
               >
@@ -82,6 +82,6 @@ export default function NavBar() {
           ))}
         </NavbarMenu>
       </Navbar>
-    </div>
+    </nav>
   );
 }

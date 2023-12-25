@@ -101,6 +101,7 @@ const About = () => {
             selectedKey={selected}
             onSelectionChange={handleSelectionChange}
             color='primary'
+            className='px-2'
           >
             <Tab key='tarificador' title='Tarificador'></Tab>
             <Tab key='personal' title='Personal'></Tab>
