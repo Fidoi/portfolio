@@ -12,6 +12,8 @@ import {
   Divider,
   Link,
 } from '@nextui-org/react';
+import { UserIcon } from '@/components/icons/UserIcon';
+
 interface Technology {
   nombre: string;
   src: string;
@@ -29,7 +31,7 @@ interface Projects {
   gitHubDescription: string;
 }
 
-const About = () => {
+const Proyects = () => {
   const [selected, setSelected] = React.useState('tarificador');
   const projects: { [key: string]: Projects } = {
     tarificador: {
@@ -75,9 +77,10 @@ const About = () => {
         'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/Logo-Trebol-2020_RGB.png?alt=media&token=239c9d75-09d6-4e19-a0d1-e4a4f74c9166',
       descriptionSentence: 'trabaje como pude mierdas',
       technologies: [
-        { nombre: 'Tecnología 1', src: '/path/to/imagen1.png' },
-        { nombre: 'Tecnología 2', src: '/path/to/imagen2.png' },
-        { nombre: 'Tecnología 3', src: '/path/to/imagen2.png' },
+        {
+          nombre: 'Tecnología 1',
+          src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/typescript_original_logo_icon_146317.png?alt=media&token=8b56e325-c026-4e2a-9307-45e4b6a70643',
+        },
       ],
       githubUrl: 'www.google.cl',
       gitHubDescription: 'Visita el codigo de GitHub ->',
@@ -104,7 +107,15 @@ const About = () => {
             className='px-2'
           >
             <Tab key='tarificador' title='Tarificador'></Tab>
-            <Tab key='personal' title='Personal'></Tab>
+            <Tab
+              key='personal'
+              title={
+                <div className='flex items-center space-x-2'>
+                  <UserIcon />
+                  <span>Personal</span>
+                </div>
+              }
+            ></Tab>
           </Tabs>
           <CardHeader className='pb-0 pt-2 px-4 flex-col items-start'>
             <p className='text-tiny uppercase font-bold'>
@@ -170,4 +181,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Proyects;
