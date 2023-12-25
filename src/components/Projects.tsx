@@ -31,7 +31,7 @@ interface Projects {
   gitHubDescription: string;
 }
 
-const Proyects = () => {
+const Projects = () => {
   const [selected, setSelected] = React.useState('tarificador');
   const projects: { [key: string]: Projects } = {
     tarificador: {
@@ -96,8 +96,8 @@ const Proyects = () => {
     }
   };
   return (
-    <section>
-      <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 sm:px-16'>
+    <section id='projects'>
+      <div className='md:grid md:grid-cols-2 gap-8 items-center py-2 px-4 xl:gap-16 sm:py-16 sm:px-16'>
         <Card className='py-4'>
           <Tabs
             aria-label='Options'
@@ -181,4 +181,4 @@ const Proyects = () => {
   );
 };
 
-export default Proyects;
+export default Projects;

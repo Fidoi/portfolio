@@ -2,6 +2,7 @@
 import { Button } from '@nextui-org/react';
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import { Link } from '@nextui-org/react';
 
 const HeroSection = () => {
   return (
@@ -29,6 +30,8 @@ const HeroSection = () => {
               color='primary'
               className='rounded-full px-6 py-3 mr-4'
               variant='shadow'
+              as={Link}
+              href='#contact'
             >
               Contacta
             </Button>

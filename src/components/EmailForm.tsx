@@ -5,7 +5,6 @@ import GithubIcon from '../../public/next.svg';
 import { useState } from 'react';
 
 const EmailForm = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
   const [buttonState, setButtonState] = useState('normal');
 
   const handleSubmit = async (e: any) => {
@@ -31,13 +30,15 @@ const EmailForm = () => {
 
     if (response.status === 200) {
       console.log('Message sent.');
-      setEmailSubmitted(true);
       setButtonState('success');
     }
   };
 
   return (
-    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative px-3'>
+    <section
+      className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative px-3'
+      id='contact'
+    >
       <div className='flex flex-col justify-center items-center'>
         <h5 className='text-xl font-bold my-3'>Manten el contacto</h5>
         <p className='mb-4 max-w-md'>
