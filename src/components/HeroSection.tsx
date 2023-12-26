@@ -35,7 +35,9 @@ const HeroSection = () => {
             >
               Contacta
             </Button>
-            <Button className='rounded-full'>Descargar cv</Button>
+            <Button className='rounded-full' variant='bordered'>
+              Descargar cv
+            </Button>
           </div>
         </div>
       </div>

@@ -39,8 +39,10 @@ const EmailForm = () => {
       className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative px-3'
       id='contact'
     >
-      <div className='flex flex-col justify-center items-center'>
-        <h5 className='text-xl font-bold my-3'>Manten el contacto</h5>
+      <div className='flex flex-col justify-center items-center '>
+        <h5 className='text-xl font-bold my-3 text-secondary'>
+          Manten el contacto
+        </h5>
         <p className='mb-4 max-w-md'>
           {' '}
           En búsqueda de nuevas oportunidades y siempre con la bandeja de

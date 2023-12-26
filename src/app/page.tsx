@@ -6,8 +6,8 @@ import About from '@/components/About';
 
 export default function Home() {
   return (
-    <main>
-      <div className='container mt-24 mx-auto px-12 py-20'>
+    <main className='container mt-24 mx-auto px-12 py-20'>
+      <div className='mb-40'>
         <HeroSection />
       </div>
       <About />
