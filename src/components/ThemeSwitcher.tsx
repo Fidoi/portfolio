@@ -18,13 +18,21 @@ export default function ThemeSwitcher() {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
+<<<<<<< HEAD
+  if (!isMounted) return null;
+=======
   if (!isMounted) return <></>;
+>>>>>>> develop
 
   return (
     <Switch
       defaultSelected={theme === 'dark' ? false : true}
       size='lg'
+<<<<<<< HEAD
+      color='default'
+=======
       color='secondary'
+>>>>>>> develop
       onChange={handleToggleTheme}
       thumbIcon={({ isSelected, className }) =>
         isSelected ? (

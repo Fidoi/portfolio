@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+'use client';
+
+import * as React from 'react';
+
+export default function Home() {
+  return (
+    <section className='py-36'>
+      <div className='container flex items-center justify-center'></div>
+    </section>
+=======
 import * as React from 'react';
 import HeroSection from '@/components/HeroSection';
 import Projects from '@/components/Projects';
@@ -14,5 +25,6 @@ export default function Home() {
       <Projects />
       <EmailForm />
     </main>
+>>>>>>> develop
   );
 }
