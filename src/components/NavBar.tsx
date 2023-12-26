@@ -16,7 +16,11 @@ import ThemeSwitcher from './ThemeSwitcher';
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const menuItems = ['Sobre mi', 'Proyectos', 'Tecnologias'];
+  const menuItems = [
+    { spanish: 'Sobre mi', english: 'about' },
+    { spanish: 'Proyectos', english: 'projects' },
+    { spanish: 'Contacto', english: 'contact' },
+  ];
 
   return (
     <nav>
@@ -63,7 +67,7 @@ export default function NavBar() {
         </NavbarContent>
         <NavbarMenu className='flex flex-col items-center justify-center h-1/2'>
           {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+            <NavbarMenuItem key={`${item.english}-${index}`}>
               <Link
                 color={
                   index === 1
@@ -73,10 +77,10 @@ export default function NavBar() {
                     : 'foreground'
                 }
                 className='w-full my-2 text-lg'
-                href={`/${item}`}
+                href={`#${item.english}`}
                 size='lg'
               >
-                {item}
+                {item.spanish}
               </Link>
             </NavbarMenuItem>
           ))}

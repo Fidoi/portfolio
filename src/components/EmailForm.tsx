@@ -1,8 +1,9 @@
 'use client';
 import React from 'react';
 import { Button, Input, Textarea, Link, Image } from '@nextui-org/react';
-import GithubIcon from '../../public/next.svg';
+import { BuildingIcon, GitHubIcon } from '@/components/icons';
 import { useState } from 'react';
+import ReactCanvasConfetti from 'react-canvas-confetti';
 
 const EmailForm = () => {
   const [buttonState, setButtonState] = useState('normal');
@@ -49,12 +50,9 @@ const EmailForm = () => {
           entrada abierta. Si tienes alguna pregunta o solo quieres saludar,
           ¡haré lo posible por responderte!
         </p>
-        <div className='socials flex flex-row gap-2'>
-          <Link href='github.com'>
-            <Image src={GithubIcon} alt='Github Icon' />
-          </Link>
-          <Link href='linkedin.com'>
-            <Image src={GithubIcon} alt='Linkedin Icon' />
+        <div className='flex flex-row gap-2'>
+          <Link href='github.com' color='secondary'>
+            <GitHubIcon />
           </Link>
         </div>
       </div>

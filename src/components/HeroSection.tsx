@@ -35,7 +35,15 @@ const HeroSection = () => {
             >
               Contacta
             </Button>
-            <Button className='rounded-full' variant='bordered'>
+            <Button
+              className='rounded-full'
+              variant='bordered'
+              as={Link}
+              isExternal
+              href={
+                'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/FULLSTACK%20CV.pdf?alt=media&token=f9994961-bab7-481a-adbe-96a3cc8f8343'
+              }
+            >
               Descargar cv
             </Button>
           </div>

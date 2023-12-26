@@ -12,7 +12,7 @@ import {
   Divider,
   Link,
 } from '@nextui-org/react';
-import { UserIcon } from '@/components/icons/UserIcon';
+import { BuildingIcon, UserIcon } from '@/components/icons';
 
 interface Technology {
   nombre: string;
@@ -67,7 +67,7 @@ const Projects = () => {
       gitHubDescription: 'Sin vista de codigo',
     },
     personal: {
-      title: 'Portafolio',
+      title: 'Personal',
       small: 'NextJs',
       sub: 'Portafolio',
       ImageUrl:
@@ -86,7 +86,7 @@ const Projects = () => {
       gitHubDescription: 'Visita el codigo de GitHub ->',
     },
     ecommerce: {
-      title: 'Ecommerce',
+      title: 'Personal',
       small: 'Django',
       sub: 'En curso...',
       ImageUrl:
@@ -116,7 +116,7 @@ const Projects = () => {
   };
   return (
     <section id='projects'>
-      <h1 className='text-center text-4xl mt-4 mb-8 md:mb-12 font-extrabold text-warning'>
+      <h1 className='text-center text-4xl mt-32 mb-8 md:mb-12 font-extrabold text-primary'>
         Mis proyectos
       </h1>
       <div className='md:grid md:grid-cols-2 gap-8 items-center py-2 px-4 xl:gap-16 sm:py-16 sm:px-16'>
@@ -128,13 +128,21 @@ const Projects = () => {
             color='primary'
             className='px-2'
           >
-            <Tab key='tarificador' title='Tarificador'></Tab>
+            <Tab
+              key='tarificador'
+              title={
+                <div className='flex items-center space-x-2'>
+                  <BuildingIcon />
+                  <span>Tarificador</span>
+                </div>
+              }
+            ></Tab>
             <Tab
               key='personal'
               title={
                 <div className='flex items-center space-x-2'>
                   <UserIcon />
-                  <span>Personal</span>
+                  <span>Portafolio</span>
                 </div>
               }
             ></Tab>

@@ -39,9 +39,6 @@ const config: Config = {
             primary: {
               DEFAULT: '#338ef7',
             },
-            warning: {
-              DEFAULT: '#f31260',
-            },
           },
         },
         modern: {
