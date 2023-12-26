@@ -9,11 +9,12 @@ export async function POST(req: NextRequest, res: NextResponse) {
   try {
     const data = await resend.emails.send({
       from: fromEmail as string,
-      to: ['fidooo.xd@gmail.com', email],
+      to: ['fidooo.xd@gmail.com'],
       subject: subject,
       react: (
         <>
           <h1>{subject}</h1>
+          <h2>{email}</h2>
           <p>Gracias por contactarme</p>
           <p>Mensaje enviado: </p>
           <p>{message}</p>
