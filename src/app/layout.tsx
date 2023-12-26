@@ -1,18 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Providers from './providers';
-import Link from 'next/link';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
->>>>>>> f418b28 (Switch funcionando)
-=======
 import Providers from './providers';
 import Navbar from '@/components/NavBar';
 import Footer from '@/components/Footer';
->>>>>>> develop
+
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,9 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-<<<<<<< HEAD
-      <body className={inter.className}>{children}</body>
-=======
+
       <body className={`${inter.className} flex min-h-screen flex-col`}>
         <Providers>
           <header className='fixed w-screen z-50'>
@@ -42,7 +32,7 @@ export default function RootLayout({
           </footer>
         </Providers>
       </body>
->>>>>>> develop
+
     </html>
   );
 }
