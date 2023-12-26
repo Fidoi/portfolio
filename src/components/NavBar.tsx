@@ -15,7 +15,10 @@ import { Image } from '@nextui-org/react';
 import ThemeSwitcher from './ThemeSwitcher';
 
 export default function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useReducer(
+    (current) => !current,
+    false
+  );
   const menuItems = [
     { spanish: 'Sobre mi', english: 'about' },
     { spanish: 'Proyectos', english: 'projects' },
@@ -29,6 +32,7 @@ export default function NavBar() {
         maxWidth='full'
         height={'5rem'}
         className='flex justify-between items-center '
+        isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
       >
         <NavbarContent>
@@ -78,6 +82,7 @@ export default function NavBar() {
                 }
                 className='w-full my-2 text-lg'
                 href={`#${item.english}`}
+                onPress={() => setIsMenuOpen()}
                 size='lg'
               >
                 {item.spanish}

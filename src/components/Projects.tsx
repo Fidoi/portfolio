@@ -75,7 +75,7 @@ const Projects = () => {
       descriptionTitle: 'Portafolio Next.js con NextUI y TypeScript:',
       descriptionImageUrl: undefined,
       descriptionSentence:
-        'Mi portafolio fusiona las tecnologías Next.js, NextUI y TypeScript para crear una experiencia única. Destaco una sección "Sobre Mí" que ofrece una visión personal y profesional. Implementé un formulario de contacto con la ágil API "resend" y las imágenes se generan con inteligencia artificial, agregando un toque innovador. Este proyecto refleja mi enfoque integral, combinando diseño atractivo con funcionalidad sólida.',
+        'Mi portafolio fusiona las tecnologías Next.js, NextUI y TypeScript para crear una experiencia única. Destaco una sección "Sobre Mí" que ofrece una visión personal y profesional. Implementé un formulario de contacto con la ágil API "resend" y las imágenes las genere con inteligencia artificial, agregando un toque innovador. Este proyecto refleja mi enfoque integral, combinando diseño atractivo con funcionalidad sólida. Un proyecto muy divertido de hacer y de continuar actualizando!.',
       technologies: [
         {
           nombre: 'Nextjs',
@@ -86,7 +86,7 @@ const Projects = () => {
           src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/typescript_original_logo_icon_146317.png?alt=media&token=8b56e325-c026-4e2a-9307-45e4b6a70643',
         },
       ],
-      githubUrl: undefined,
+      githubUrl: 'https://github.com/Fidoi/portfolio',
       gitHubDescription: 'Visita el codigo de GitHub ->',
     },
     ecommerce: {
@@ -196,7 +196,7 @@ const Projects = () => {
               </div>
             </CardHeader>
             <Divider />
-            <CardBody className='justify-center'>
+            <CardBody>
               <p className='text-base md:text:lg'>
                 {selectedProject.descriptionSentence}
               </p>
