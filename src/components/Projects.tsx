@@ -78,7 +78,11 @@ const Projects = () => {
         'Mi portafolio fusiona las tecnologías Next.js, NextUI y TypeScript para crear una experiencia única. Destaco una sección "Sobre Mí" que ofrece una visión personal y profesional. Implementé un formulario de contacto con la ágil API "resend" y las imágenes se generan con inteligencia artificial, agregando un toque innovador. Este proyecto refleja mi enfoque integral, combinando diseño atractivo con funcionalidad sólida.',
       technologies: [
         {
-          nombre: 'Tecnología 1',
+          nombre: 'Nextjs',
+          src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/next-js-icon-logo-EE302D5DBD-seeklogo.com.png?alt=media&token=7db39c1e-cfff-4bd1-8ec6-239e9442bd97',
+        },
+        {
+          nombre: 'Typescript',
           src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/typescript_original_logo_icon_146317.png?alt=media&token=8b56e325-c026-4e2a-9307-45e4b6a70643',
         },
       ],
@@ -97,8 +101,8 @@ const Projects = () => {
         'Este proyecto de comercio electrónico se basa en la potencia de Django para construir un backend robusto y seguro que gestionará productos, pedidos y autenticación de manera eficiente. En el frontend, utilizamos Next.js para lograr una interfaz de usuario moderna y dinámica.',
       technologies: [
         {
-          nombre: 'Tecnología 1',
-          src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/typescript_original_logo_icon_146317.png?alt=media&token=8b56e325-c026-4e2a-9307-45e4b6a70643',
+          nombre: 'Django',
+          src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/django.png?alt=media&token=64e6b565-f6b5-4228-949f-b61e28c65969',
         },
       ],
       githubUrl: undefined,
