@@ -51,7 +51,7 @@ const EmailForm = () => {
           ¡haré lo posible por responderte!
         </p>
         <div className='flex flex-row gap-2'>
-          <Link href='github.com' color='secondary'>
+          <Link href='https://github.com/Fidoi' color='secondary' isExternal>
             <GitHubIcon />
           </Link>
         </div>
