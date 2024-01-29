@@ -2,11 +2,11 @@
 import { Button } from '@nextui-org/react';
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { Link } from '@nextui-org/react';
+import { Link, Image } from '@nextui-org/react';
 
 const HeroSection = () => {
   return (
-    <section className='py-32'>
+    <section>
       <div className='grid grid-cols-1 sm:grid-cols-12'>
         <div className='col-span-8 place-self-center sm:text-left justify-self-start text-center '>
           <h1 className='mb-4 text-4xl sm:text-6xl lg:text-8xl font-semibold tracking-tight inline'>
@@ -47,6 +47,16 @@ const HeroSection = () => {
               Descargar cv
             </Button>
           </div>
+        </div>
+        <div className='col-span-4 justify-self-end'>
+          <Image
+            isZoomed
+            isBlurred
+            src='https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/mitaka_asa_ka.gif?alt=media&token=aeff2b74-79ef-4c15-bf3c-1f2930d110c2'
+            alt='Mitaka_Asa'
+            width={500}
+            height={500}
+          />
         </div>
       </div>
     </section>

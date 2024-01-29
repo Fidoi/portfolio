@@ -98,14 +98,14 @@ const Projects = () => {
       descriptionTitle: 'Ecommerce Django:',
       descriptionImageUrl: undefined,
       descriptionSentence:
-        'Este proyecto de comercio electrónico se basa en la potencia de Django para construir un backend robusto y seguro que gestionará productos, pedidos y autenticación de manera eficiente. En el frontend, utilizamos Next.js para lograr una interfaz de usuario moderna y dinámica.',
+        'Este proyecto de comercio electrónico se basa en la potencia de Django para construir un backend robusto y seguro que gestionará productos, pedidos y autenticación de manera eficiente. En el frontend, se utilizará NextJs para lograr una interfaz de usuario moderna y dinámica.',
       technologies: [
         {
           nombre: 'Django',
           src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/django.png?alt=media&token=64e6b565-f6b5-4228-949f-b61e28c65969',
         },
       ],
-      githubUrl: undefined,
+      githubUrl: 'https://github.com/Fidoi/full-auth-api',
       gitHubDescription: 'Visita el codigo de GitHub ->',
     },
   };
