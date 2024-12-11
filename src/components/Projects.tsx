@@ -29,6 +29,7 @@ interface Projects {
   technologies: Technology[];
   githubUrl: string | undefined;
   gitHubDescription: string;
+  projectUrl?: string;
 }
 
 const Projects = () => {
@@ -91,22 +92,31 @@ const Projects = () => {
     },
     ecommerce: {
       title: 'Personal',
-      small: 'Django',
-      sub: 'En curso...',
+      small: 'NextJs',
+      sub: 'Ecommerce',
       ImageUrl:
-        'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/ecommerce.jfif?alt=media&token=dd71a882-a293-4fff-ae78-1a7ffd7d1361',
-      descriptionTitle: 'Ecommerce Django:',
+        'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/Screenshot_1408.png?alt=media&token=18e5ad9e-fdeb-4d98-adf6-dab0831e97c3',
+      descriptionTitle: 'Ecommerce con Nextjs:',
       descriptionImageUrl: undefined,
       descriptionSentence:
-        'Este proyecto de comercio electrónico se basa en la potencia de Django para construir un backend robusto y seguro que gestionará productos, pedidos y autenticación de manera eficiente. En el frontend, se utilizará NextJs para lograr una interfaz de usuario moderna y dinámica.',
+        'Este proyecto de comercio electrónico hice uso de herramientas como Zustand para la gestion de estados, NextAuth para la authenticacion y con una implementacion de pago como lo es PayPal',
       technologies: [
         {
-          nombre: 'Django',
-          src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/django.png?alt=media&token=64e6b565-f6b5-4228-949f-b61e28c65969',
+          nombre: 'Paypal',
+          src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/Paypal_logo.png?alt=media&token=7f7fdf31-4e32-4cbb-ad1f-266d1888ffef',
+        },
+        {
+          nombre: 'NextJs',
+          src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/next-js-icon-logo-EE302D5DBD-seeklogo.com.png?alt=media&token=7db39c1e-cfff-4bd1-8ec6-239e9442bd97',
+        },
+        {
+          nombre: 'NextAuth',
+          src: 'https://firebasestorage.googleapis.com/v0/b/desarrollo-5753a.appspot.com/o/logo-sm.png?alt=media&token=954543b1-2f3e-4b1b-903b-3a3dc510bbfd',
         },
       ],
-      githubUrl: 'https://github.com/Fidoi/full-auth-api',
+      githubUrl: 'https://github.com/Fidoi/Teslo',
       gitHubDescription: 'Visita el codigo de GitHub ->',
+      projectUrl: 'https://ecommerce-test-t.vercel.app/',
     },
   };
   const [selectedProject, setSelectedProject] = useState(projects.tarificador);
@@ -158,7 +168,7 @@ const Projects = () => {
                   <span>Ecommerce</span>
                 </div>
               }
-            ></Tab>
+            />
           </Tabs>
           <CardHeader className='pb-0 pt-2 px-4 flex-col items-start'>
             <p className='text-tiny uppercase font-bold'>
@@ -168,14 +178,16 @@ const Projects = () => {
             <h4 className='font-bold text-large'>{selectedProject.sub}</h4>
           </CardHeader>
           <CardBody className='overflow-visible py-2 flex justify-center items-center'>
-            <Image
-              isZoomed
-              isBlurred
-              alt='Logo'
-              src={selectedProject.ImageUrl}
-              height={500}
-              width={500}
-            ></Image>
+            <Link href={selectedProject.projectUrl}>
+              <Image
+                isZoomed
+                isBlurred
+                alt='Logo'
+                src={selectedProject.ImageUrl}
+                height={500}
+                width={500}
+              />
+            </Link>
           </CardBody>
         </Card>
         <div>
