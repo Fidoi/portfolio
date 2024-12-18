@@ -8,7 +8,7 @@ const About = () => {
         <div className='mt-4 md:mt-0 text-left flex flex-col h-full items-center justify-center'>
           <h2 className='text-4xl font-bold mb-4 text-warning'>Sobre Mi</h2>
           <p className='text-base lg:text-lg'>
-            Soy un desarrollador web full stack con una pasión por crear
+            Soy un desarrollador web full stack con un gran interes por crear
             aplicaciones web interactivas y receptivas. Tengo experiencia
             trabajando con TypeScript, React, Next.js, Node.js, PostgreSQL,
             HTML, CSS y Git. Soy un aprendiz rápido y siempre estoy buscando

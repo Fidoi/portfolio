@@ -5,7 +5,6 @@ import Providers from './providers';
 import Navbar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 
-
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -20,7 +19,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-
       <body className={`${inter.className} flex min-h-screen flex-col`}>
         <Providers>
           <header className='fixed w-screen z-50'>
@@ -32,7 +30,6 @@ export default function RootLayout({
           </footer>
         </Providers>
       </body>
-
     </html>
   );
 }
